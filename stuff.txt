@@ -5,6 +5,8 @@ sudo nixos-rebuild switch --upgrade
 sudoedit configuration.nix
 sudo nixos-rebuild switch
 cd /etc/nixos
+sudo nixos-rebuild switch --flake /etc/nixos/#default
+sudo nixos-rebuild switch --flake
 
 
 https://anitaku.so/
