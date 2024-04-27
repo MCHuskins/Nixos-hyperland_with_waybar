@@ -46,9 +46,16 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+ 
+# hyperland
+
+  programs.hyprland.enable = true;
+ #idk what this one is
+   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+#plasma
+
+ services.xserver.displayManager.sddm.enable = true;
+ services.xserver.desktopManager.plasma5.enable = true;
 
 
   # Configure keymap in X11
