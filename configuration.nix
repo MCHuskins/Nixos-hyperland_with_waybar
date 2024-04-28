@@ -54,8 +54,20 @@
    programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 #plasma
 
+
  services.xserver.displayManager.sddm.enable = true;
  services.xserver.desktopManager.plasma5.enable = true;
+
+
+systemd.services.foo = {
+  script = ''
+    echo 76 > /sys/class/power_supply/BAT0/charge_control_end_threshold
+  '';
+  wantedBy = [ "multi-user.target" ];
+};
+
+
+
 
 
   # Configure keymap in X11
@@ -81,7 +93,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -92,8 +103,10 @@
      sbctl 
      niv
      lshw
+     kitty
      firefox
-  #  wget
+     waybar
+     brave
   ];
 
 
