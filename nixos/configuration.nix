@@ -50,7 +50,9 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
+#plasma
+services.xserver.displayManager.sddm.enable = true;
+services.xserver.desktopManager.plasma5.enable = true;
  
 # hyperland
   programs.hyprland.enable = true;
@@ -60,9 +62,6 @@
 #  environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
 
-#plasma
-# services.xserver.displayManager.sddm.enable = true;
-# services.xserver.desktopManager.plasma5.enable = true;
 
 
 systemd.services.foo = {
@@ -277,10 +276,10 @@ fonts.packages = with pkgs; [
   };
   hardware.nvidia.prime = {
     sync.enable = true;
-		#offload = {
-		#	enable = true;
-		#	enableOffloadCmd = true;
-		#};
+		# offload = {
+			# enable = true;
+			# enableOffloadCmd = true;
+		# };
 		# Make sure to use the correct Bus ID values for your system!
 		intelBusId = "PCI:0:2:0";
 		nvidiaBusId = "PCI:01:0:0";
