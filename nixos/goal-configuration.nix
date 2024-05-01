@@ -129,7 +129,7 @@
     #  wtype
     #  wlrctl
     #  waybar
-    #  rofi-wayland
+       rofi-wayland #do this one
     #  avizo
     #  wlogout
     #  #hyperland stuff
