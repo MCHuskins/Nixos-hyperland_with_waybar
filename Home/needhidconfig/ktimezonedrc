@@ -1,0 +1,4 @@
+[TimeZones]
+LocalZone=America/Los_Angeles
+ZoneinfoDir=/etc/zoneinfo
+Zonetab=/etc/zoneinfo/zone.tab

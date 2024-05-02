@@ -1,0 +1,28 @@
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+1646x1029 screen: XPosition=477
+1646x1029 screen: YPosition=207
+2880x1800 screen: XPosition=576
+2880x1800 screen: YPosition=365
+State=AAAA/wAAAAD9AAAAAQAAAAAAAADIAAACYvwCAAAAAfsAAAAcAG8AawB1AGwAYQByAF8AcwBpAGQAZQBiAGEAcgEAAABMAAACYgAAAQ4BAAACAAADHwAAAmIAAAAEAAAABAAAAAgAAAAI/AAAAAMAAAABAAAAAQAAACwAcQB1AGkAYwBrAEEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgIAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAiAGEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+eDP-1-1=eDP-1-1
+
+[Recent Files]
+File1[$e]=/etc/nixos/flake.lock
+File2[$e]=/etc/nixos/flake.nix
+File3[$e]=/etc/nixos/configuration.nix
+File4[$e]=admin:/etc/nixos/configuration.nix
+File5[$e]=$HOME/.config/hypr/hyprland.conf
+Name1[$e]=flake.lock
+Name2[$e]=flake.nix
+Name3[$e]=configuration.nix
+Name4[$e]=configuration.nix
+Name5[$e]=hyprland.conf

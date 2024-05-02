@@ -1,0 +1,24 @@
+[General]
+ConfigVersion=1
+
+[MainWindow]
+1440x900 screen: Window-Maximized=true
+1646x1029 screen: Height=974
+1646x1029 screen: Width=1646
+1646x1029 screen: XPosition=0
+1646x1029 screen: YPosition=30
+2880x1800 screen: Height=1704
+2880x1800 screen: Width=2880
+2880x1800 screen: Window-Maximized=true
+2880x1800 screen: XPosition=0
+2880x1800 screen: YPosition=52
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAcAFMAUwBIAE0AYQBuAGEAZwBlAHIARABvAGMAawAAAAAA/////wAAARMA////+wAAACIAUQB1AGkAYwBrAEMAbwBtAG0AYQBuAGQAcwBEAG8AYwBrAAAAAAD/////AAABeAD///8AAALHAAABkwAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAQAAAQn/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+eDP-1-1=eDP-1-1
+
+[Notification Messages]
+CloseSingleTab=true
+
+[UiSettings]
+ColorScheme=
