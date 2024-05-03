@@ -1,15 +1,9 @@
 nix-collect-garbage -d
 nix-store --optimise
 nix-collect-garbage
-sudo nixos-rebuild switch --upgrade
-sudoedit configuration.nix
-sudo nixos-rebuild switch
-cd /etc/nixos
+sudoedit /etc/nixos/configuration.nix 
 sudo nixos-rebuild switch --flake /etc/nixos/#default
 sudo nixos-rebuild switch --flake
-
 (get email and login info)
-https://nixos.wiki/wiki/Nvidia
-https://search.nixos.org/packages?channel=23.11&from=0&size=50&sort=relevance&type=packages&query=nvidia
 https://www.expressvpn.com/sign-in?reason=not_signed_in&redirect_path=%2Fsetup#manual
 https://www.expressvpn.com/support/vpn-setup/manual-config-for-linux-ubuntu-with-openvpn/#install
