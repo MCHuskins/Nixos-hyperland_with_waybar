@@ -5,4 +5,4 @@ https://github.com/XNM1/linux-nixos-hyprland-config-dotfiles/blob/main/home/.con
 
 Things where copped form:
 XNM1/linux-nixos-hyprland-config-dotfiles  
-https://github.com/linuxmobile/hyprland-dots
+linuxmobile/hyprland-dots
