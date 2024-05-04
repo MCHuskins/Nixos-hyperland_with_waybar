@@ -11,8 +11,13 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  #boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.lanzaboote = {
+              enable = true;
+              pkiBundle = "/etc/secureboot";
+            };
+
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -25,10 +30,6 @@
 
   #nix flakes
    nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-#might remove 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
 #screen thing 
  services.geoclue2.appConfig = {
@@ -44,51 +45,6 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = false;
   services.blueman.enable = true;
-
-
-  # Enable Theme
-  environment.variables.GTK_THEME = "Catppuccin-Macchiato-Standard-Teal-Dark";
-  environment.variables.XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
-  environment.variables.XCURSOR_SIZE = "24";
-  environment.variables.HYPRCURSOR_THEME = "Catppuccin-Macchiato-Teal";
-  environment.variables.HYPRCURSOR_SIZE = "24";
-  qt.enable = true;
-  qt.platformTheme = "gtk2";
-  qt.style = "gtk2";
-  console = {
-   earlySetup = true;
-   colors = [
-     "24273a"
-     "ed8796"
-     "a6da95"
-     "eed49f"
-     "8aadf4"
-     "f5bde6"
-     "8bd5ca"
-     "cad3f5"
-     "5b6078"
-     "ed8796"
-     "a6da95"
-     "eed49f"
-     "8aadf4"
-     "f5bde6"
-     "8bd5ca"
-     "a5adcb"
-   ];
-  };
-
-  # Override packages
-  nixpkgs.config.packageOverrides = pkgs: {
-   colloid-icon-theme = pkgs.colloid-icon-theme.override { colorVariants = ["teal"]; };
-   catppuccin-gtk = pkgs.catppuccin-gtk.override {
-     accents = [ "teal" ]; # You can specify multiple accents here to output multiple themes 
-     size = "standard";
-     variant = "macchiato";
-   };
-  };
-
-
-
 
  # Fonts
    fonts.packages = with pkgs; [
@@ -169,24 +125,6 @@
     ];
   };
 
-#waybar stuff
-  programs.direnv.enable = true;
-  services.upower.enable = true;
-  programs.fish.enable = true;
- # Enable Services see if I can get ride of thing latter 
-  services.geoclue2.enable = true;
-  programs.dconf.enable = true;
-  services.dbus.enable = true;
-  #services.dbus.packages = with pkgs; [
-  #	xfce.xfconf #or this one
- # 	gnome2.GConf #idk about this one
-  #];
-  services.mpd.enable = true;
-  #programs.xfconf.enable = true;
-  services.tumbler.enable = true; 
-
-
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -194,87 +132,34 @@
   # List packages installed in system profile. To search, 
   environment.systemPackages = with pkgs; [
      vim
-     sbctl #idk
+     sbctl #sucreboot thing
      niv
      lshw 
      kitty
      firefox
      vscode
+     gdu
  #terminal-utils
-      zoxide
-      starship
-      wezterm
-      fzf #can seacerh files i htink 
-      tre-command
-      rsclock
-      cava
-      figlet
-#     hyprlock
-      hyprpaper
-      waybar
-      dunst 
-#waybar things
-      ripgrep
- #  #info-fetchers
-      neofetch
-      ipfetch
-      cpufetch
-      ramfetch
       avizo #sound
-          # #utils #migt get ride of if I can
-    #  mold
-    #  gcc13
-    #  jdk11
-    #  surrealdb-migrations
-    #  surrealist #not satlbe
-     #info-fetchers
-     neofetch
-     ipfetch
-     cpufetch
-     ramfetch
-     htop
-     bottom
-     btop
-     zfxtop
-     kmon
-    #  #idk about this one
-     policycoreutils
-     #screen 
-     gammastep
-     brightnessctl
-    #  #theme
-     numix-icon-theme-circle
-     colloid-icon-theme
-     catppuccin-gtk
-     catppuccin-kvantum
-     catppuccin-cursors.macchiatoTeal
-     #sucrearlty idk about this one
-     vulnix       #scan command: vulnix --system
-     clamav       #scan command: sudo freshclam; clamscan [options] [file/directory/-]
-     chkrootkit   #scan command: sudo chkrootkit
-    #services 
-     at-spi2-atk
-     qt6.qtwayland
-     psi-notify
-     poweralertd
-     playerctl
-     psmisc
-     wl-clipboard
-     cliphist
-     clipboard-jh
-     xdg-utils
-     wtype
-     wlrctl
-     rofi-wayland #do this one
-     wlogout
-     #hyperland stuff
-     pyprland
-     hyprpicker
-    #  hyprcursor
-    #  hyprlock
-     #hypridle
+    killall
 
-
+    #waybar stuff 
+    #hyprpicker
+    hyprpaper #wallpaper thing
+#   (waybar.overrideAttrs (oldAttrs: {
+ #   mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+#  })
+#)
+    swww
+    waybar
+    pyprland
+    rofi-wayland
+    dunst
+    pyprland
+    #nwg-look
+    #wlogout
+    #wlsunset
+    networkmanagerapplet
  ];
 
 
