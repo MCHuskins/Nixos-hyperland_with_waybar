@@ -1,6 +1,6 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+# nd in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
 
@@ -72,7 +72,7 @@
 
   # hyperland
   programs.hyprland.enable = true;
- programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
@@ -131,34 +131,22 @@
 
   # List packages installed in system profile. To search, 
   environment.systemPackages = with pkgs; [
-     vim
-     sbctl #sucreboot thing
-     niv
-     lshw 
-     kitty
-     firefox
-     vscode
-     gdu
- #terminal-utils
-      avizo #sound
-    killall
-
-    #waybar stuff 
-    #hyprpicker
+    vim
+    sbctl #sucreboot thing
+    lshw 
+    niv
+ #    kitty
+    firefox
+    vscode
+   # brave
+    avizo #sound
+    pavucontrol #sond thing
+ #waybar stuff 
+   # waypaper
     hyprpaper #wallpaper thing
-#   (waybar.overrideAttrs (oldAttrs: {
- #   mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-#  })
-#)
-    swww
+#    swww #this cool be cool to use
     waybar
-    pyprland
     rofi-wayland
-    dunst
-    pyprland
-    #nwg-look
-    #wlogout
-    #wlsunset
     networkmanagerapplet
  ];
 
@@ -181,10 +169,10 @@
   };
   hardware.nvidia.prime = {
     sync.enable = true;
-		# offload = {
-			# enable = true;
-			# enableOffloadCmd = true;
-		# };
+	#	offload = {
+	#		enable = true;
+	#		enableOffloadCmd = true;
+	#	};
 		# Make sure to use the correct Bus ID values for your system!
 		intelBusId = "PCI:0:2:0";
 		nvidiaBusId = "PCI:01:0:0";
